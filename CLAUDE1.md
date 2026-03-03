@@ -26,20 +26,13 @@ The root `/` page is intended as a redirect: logged-in users go to `/heists`, ot
 
 Components live in `components/<Name>/` with barrel exports (`index.ts`) and CSS Modules (`<Name>.module.css`).
 
-**Reusable UI components available:**
-- `Input` — controlled input that renders its own `<label>` + `<input>` together. Requires both `id` and `label` props.
-- `Button` — generic button defaulting to `type="button"`.
-- `PasswordInput` — controlled password input with built-in show/hide toggle (manages its own visibility state internally).
-
 ### Styling
 
 Tailwind v4 with custom theme tokens defined via `@theme` in `app/globals.css`. Key colors: `primary`, `secondary`, `dark`, `light`, `lighter`, `success`, `error`, `heading`, `body`. CSS Modules reference globals.css with `@reference "../../app/globals.css"` to access theme values.
 
 ### Testing
 
-Vitest with jsdom environment, React Testing Library, and `@testing-library/jest-dom` matchers (auto-loaded via `vitest.setup.ts`). Test globals are enabled — no need to import `describe`, `it`, `expect`. Tests mirror source structure under `tests/` — component tests in `tests/components/`, page tests in `tests/pages/`.
-
-**Key testing gotcha:** `vi` (for spying/mocking) is NOT a global — always import it explicitly: `import { vi } from "vitest"`. Password inputs (`type="password"`) are not exposed as the `textbox` role; query them with `document.querySelector("input[type='password']")`.
+Vitest with jsdom environment, React Testing Library, and `@testing-library/jest-dom` matchers (auto-loaded via `vitest.setup.ts`). Test globals are enabled — no need to import `describe`, `it`, `expect`. Tests mirror source structure under `tests/`.
 
 ### Path Aliases
 
@@ -48,20 +41,3 @@ Vitest with jsdom environment, React Testing Library, and `@testing-library/jest
 ### Icons
 
 Uses `lucide-react` for icons.
-
-## Workflow
-
-### Feature Development
-
-Features follow a spec → plan → implement workflow:
-
-- `_specs/` — markdown feature specs created via the `/spec` command
-- `_plans/` — implementation plans created during plan mode
-
-### Custom Slash Commands
-
-Located in `.claude/commands/`:
-
-- `/spec <idea>` — creates a feature branch and spec file in `_specs/` from a short description
-- `/component <name>` — scaffolds a new component using TDD
-- `/commit-message` — analyzes staged changes and proposes a commit message
