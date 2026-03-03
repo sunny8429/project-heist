@@ -8,4 +8,4 @@
 
 5.  /component an avatar component which displays the frist letter of a name passed as a prop. If the name is PascalCase, use the first 2 uppercase letters for the avarar. No pics.
 
-6.  /spec let's spec the authentication forms on the @app/(public)/login\ @app/(public)/signup\ pages. They need email and password fields, a 'hide password' icon, and a submit button (signup/login). The forms should only log details to the console for now, when they are submitted. We should be able to easily switch between the two forms .
+6.  /spec let's spec the authentication forms on the @app/(public)/login\ @app/(public)/signup\ pages. They need email and password fields, a 'hide password' icon, and a submit button (signup/login). The forms should only log details to the console for now, when they are submitted. We should be able to easily switch between the two forms.
