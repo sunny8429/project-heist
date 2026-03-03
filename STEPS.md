@@ -112,3 +112,8 @@
 9. **Bash Mode with `!`**
    - Type `!` in the chat window to switch into bash mode
    - Allows you to run shell commands directly without leaving the session
+
+10. **`/config`** - Toggle Thinking Mode
+    - Thinking mode is on by default and consumes extra tokens
+    - Turn it off via `/config` to reduce token usage
+    - When thinking mode is off, add `ultrathink` to your prompt to trigger thinking mode for that request only
