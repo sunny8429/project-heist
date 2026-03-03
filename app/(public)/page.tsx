@@ -11,7 +11,7 @@ export default function Home() {
         <h1>
           P<Clock8 className="logo" strokeWidth={2.75} />cket Heist
         </h1>
-        <div>Steal the day. Own the office.</div>
+        <div>Your time. Their loss.</div>
       </div>
     </div>
   )
